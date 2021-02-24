@@ -71,6 +71,7 @@ class Fwd:
             b = self.inSock.recv(self.bufCap - len(self.buf))
         except:
             self.conn.die()
+            return
         if len(b):
             self.buf += b
         else:
